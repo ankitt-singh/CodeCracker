@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    flex-direction: row;
+}
+.login-credential, .login-image{
+    height: 100vh; /* Full height of viewport */
+    width: 50%; /* Each takes up half of the width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-credential {
+    flex-direction: column;
+    gap: 10px;
+}
+
+h2 {
+    margin-left: 14rem; /* Remove default margin */
+    padding-left: 5px; /* Align text with input field */
+    width: 100%; /* Ensure it stretches properly */
+}
+
+.credential-info {
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    width: 70%;
+    justify-content: flex-start; /* Align items to the top */
+    gap: 10px; /* Adjust spacing between elements */
+    padding-top: 10%;
+    align-items: flex-start; /* Ensures text aligns with inputs */
+}
+
+.login-image {
+    position: relative;
+    width: 50%; /* Ensure it takes half the screen */
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-image video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover; /* Ensures the video covers the entire div */
+}
+
+.login-image p {
+    position: absolute;
+    top: 70%; /* Adjust as needed */
+    left: 45%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align:left;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a slight background for better readability */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid gray;
+    text-align: left;
+    padding-left: 5px;
+}
+
+input::placeholder {
+    padding-left: 5px;
+}
+
+.Submit{
+    border: none;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: rgb(55, 218, 55);
+    border-bottom: gray;
+}
+
+.separator {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px; /* Adjust spacing */
+}
+
+.separator hr {
+    flex-grow: 1; /* Lines take up available space */
+    border: none;
+    height: 1px;
+    background-color: gray;
+}
+
+.separator p {
+    white-space: nowrap;
+    font-size: 16px;
+    color: gray;
+}
+
+.google{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid gray;
+}
+.github{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid gray;
+}
