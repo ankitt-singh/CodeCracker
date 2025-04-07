@@ -1,39 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeCracker</title>
-    <link rel="icon" type="image/png" href="modern logo.png">
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeCracker</title>
+  <link rel="icon" type="image/png" href="modern logo.png"/>
+  <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
-    <div class="login-image">
-        <video autoplay loop muted playsinline>
-            <source src="globe-5fdfa9a0f4.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <p>Welcome to <br> CodeCracker Community</p>
+  <div class="login-image">
+    <video autoplay loop muted playsinline>
+      <source src="globe-5fdfa9a0f4.mp4" type="video/mp4"/>
+      Your browser does not support the video tag.
+    </video>
+    <p>Welcome to <br> CodeCracker Community</p>
+  </div>
+
+  <div class="login-credential">
+    <h2>Join us <br> Create a CodeCracker account</h2>
+    <div class="credential-info">
+      <input type="text" class="name" placeholder="Full Name"/>
+      <input type="email" class="email" placeholder="Email"/>
+      <input type="password" class="passward" placeholder="Your password"/>
+      <button class="Submit">Sign up</button>
+
+      <div class="separator">
+        <hr>
+        <p>or</p>
+        <hr>
+      </div>
+
+      <button class="google">Continue with Google</button>
+      <button class="github">GitHub</button>
     </div>
-            <div class="login-credential">
-                <h2>Join us <br> Create a CodeCracker account</h2>
-                <div class="credential-info">
-                      <input type="text" class="name" placeholder="Full Name">
-                      <input type="email" class="email" placeholder="Email">
-                      <input type="password" class="passward" placeholder="Your password">
-                      <button class="Submit">Sign up</button>
+  </div>
 
-                      <div class="separator">
-                        <hr>
-                        <p>or</p>
-                        <hr>
-                    </div>
-            
-                    <button class="google">Continue with Google</button>
-                    <button class="github">GitHub</button>
-              </div>
-            </div>
+  <!-- Firebase JS SDK -->
+  <script type="module">
+    // Import Firebase SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+    import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyBGMT3v_6fopeh78Ze44AJIPPBM-4FczFM",
+      authDomain: "codecracker-7e97a.firebaseapp.com",
+      projectId: "codecracker-7e97a",
+      storageBucket: "codecracker-7e97a.appspot.com",
+      messagingSenderId: "747903395548",
+      appId: "1:747903395548:web:5e6fb1dd81f751927cf619",
+      measurementId: "G-PZXD0YT8ND"
+    };
 
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    const googleBtn = document.querySelector(".google");
+
+    googleBtn.addEventListener("click", async () => {
+      const provider = new GoogleAuthProvider();
+      try {
+        const result = await signInWithPopup(auth, provider);
+        const user = result.user;
+
+        // Save to Firestore
+        await setDoc(doc(db, "users", user.uid), {
+          email: user.email,
+          name: user.displayName,
+          uid: user.uid,
+          joinedAt: new Date().toISOString()
+        });
+
+        // Redirect to home.html
+        window.location.href = "home.html";
+      } catch (error) {
+        console.error("Google Sign-In Error:", error);
+        alert("Google sign-in failed. Please try again.");
+      }
+    });
+  </script>
 </body>
 </html>
