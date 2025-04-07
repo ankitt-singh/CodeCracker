@@ -1,136 +1,278 @@
-* {
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #ffffff;
+    color: rgb(6, 6, 6);
 }
-body{
-    height: 100%;
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00adb5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust size as needed */
+    width: auto;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.login-btn{
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    width: 4rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #fcfcfc, #eaba73);
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #00adb5;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta-button2 {
+    padding: 10px 20px;
+    background-color: #ff8c00;
+    color: #f6f6f6;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.time-laps{
     width: 100%;
-    overflow: hidden; /* Prevent scrolling */
+    height: 600px;
+    /* display: flex; */
+    flex-direction: row;
+    /* border: 2px solid black; */
+
+}
+
+.time-laps h2{
+    display: flex;
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+    margin: 2rem 0 0;
+
+}
+
+.time-laps p{
+    font-size: 18px;
+    text-align: center;
+}
+
+.graph{
+    width: 80%;
+    aspect-ratio: 2.8;
     display: flex;
     flex-direction: row;
-}
-.login-credential, .login-image{
-    height: 100vh; /* Full height of viewport */
-    width: 50%; /* Each takes up half of the width */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.login-credential {
-    flex-direction: column;
-    gap: 10px;
-}
-
-h2 {
-    margin-left: 14rem; /* Remove default margin */
-    padding-left: 5px; /* Align text with input field */
-    width: 100%; /* Ensure it stretches properly */
-}
-
-.credential-info {
     /* border: 2px solid black; */
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-around;
+}
+
+.chart-container1{
+    width:40%;
+    aspect-ratio: 2;
+    /* border: 2px solid black; */
+    /* margin-left: 10%; */
+    
+}
+.chart-container2{
+    display: flex;
+    width:40%;
+    align-items: center;
+    aspect-ratio: 2;
+    /* border: 2px solid black; */
+    /* margin-left: 10%; */
+}
+
+.link-platform{
+    width: 70%;
+    aspect-ratio: 2.5;
+    display: flrx;
+    /* border: 2px solid black; */
+    margin-left: 16.5%;
+    margin-right: 17.5%;
+    gap:2px;
+}
+.link-platform h2{
+    display: flex;
+    font-size: 60px;
+    text-align: center;
+    justify-content: center;
+    margin: 2rem 0 0;
+
+}
+.link-platform p{
+    font-size: 18px;
+    text-align: center;
+}
+.link-image{
+    height: 80%;
+    width: 100%;
+    /* border: 2px solid black; */
+    background-image: url('resources/img2.jpg'); /* Replace with your image path */
+    background-size:contain; /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.feature {
+    text-align: center;
+    width: 30%;
+}
+
+.feature h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #00adb5;
+}
+
+.feature p {
+    font-size: 16px;
+}
+
+/* FAQs */
+
+.faq-container{
     display: flex;
     flex-direction: column;
-    height: 70%;
-    width: 70%;
-    justify-content: flex-start; /* Align items to the top */
-    gap: 10px; /* Adjust spacing between elements */
-    padding-top: 10%;
-    align-items: flex-start; /* Ensures text aligns with inputs */
-}
-
-.login-image {
-    position: relative;
-    width: 50%; /* Ensure it takes half the screen */
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+    /* border: 2px solid black; */
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin: auto;
     justify-content: center;
-}
-
-.login-image video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    min-width: 100%;
-    object-fit: cover; /* Ensures the video covers the entire div */
-}
-
-.login-image p {
-    position: absolute;
-    top: 70%; /* Adjust as needed */
-    left: 45%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    text-align:left;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a slight background for better readability */
-    padding: 10px;
-    border-radius: 10px;
-}
-
-input {
-    width: 100%;
-    height: 2.5rem;
-    border-radius: 10px;
-    border: 1px solid gray;
+    /* align-items:center; */
     text-align: left;
-    padding-left: 5px;
 }
-
-input::placeholder {
-    padding-left: 5px;
-}
-
-.Submit{
-    border: none;
+.faq-item .faq-question{
+    /* display: flex; */
+    justify-content: center;
+    align-items:center;
+    text-align:left;
     width: 100%;
     height: 2.5rem;
-    border-radius: 10px;
-    background-color: rgb(55, 218, 55);
-    border-bottom: gray;
 }
 
-.separator {
-    margin-top: 5rem;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 10px; /* Adjust spacing */
-}
-
-.separator hr {
-    flex-grow: 1; /* Lines take up available space */
-    border: none;
-    height: 1px;
-    background-color: gray;
-}
-
-.separator p {
-    white-space: nowrap;
-    font-size: 16px;
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    font-size: 14px;
     color: gray;
 }
 
-.google{
-    width: 100%;
-    height: 2.5rem;
-    border-radius: 10px;
-    background-color: white;
-    border: 1px solid gray;
+.faq-container {
+    max-width: 700px;
+    margin: auto;
+    font-family: Arial, sans-serif;
 }
-.github{
-    width: 100%;
-    height: 2.5rem;
-    border-radius: 10px;
-    background-color: white;
-    border: 1px solid gray;
+
+.faq-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
 }
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    background: #f8f8f8;
+    border: none;
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    /* font-weight: bold; */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    outline: none;
+}
+
+.faq-question:hover {
+    background: #e0e0e0;
+}
+
+.faq-question.active {
+    background: #d4d4d4;
+}
+
+.faq-answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    padding: 0 15px;
+    background: #f9f9f9;
+    font-size: 14px;
+    line-height: 1.6;
+}
+

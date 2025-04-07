@@ -1,88 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CodeCracker</title>
-  <link rel="icon" type="image/png" href="modern logo.png"/>
-  <link rel="stylesheet" href="index.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCracker - Competitive Programming Tracker</title>
+    <link rel="icon" type="image/png" href="resources/logo.png">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <div class="login-image">
-    <video autoplay loop muted playsinline>
-      <source src="globe-5fdfa9a0f4.mp4" type="video/mp4"/>
-      Your browser does not support the video tag.
-    </video>
-    <p>Welcome to <br> CodeCracker Community</p>
-  </div>
 
-  <div class="login-credential">
-    <h2>Join us <br> Create a CodeCracker account</h2>
-    <div class="credential-info">
-      <input type="text" class="name" placeholder="Full Name"/>
-      <input type="email" class="email" placeholder="Email"/>
-      <input type="password" class="passward" placeholder="Your password"/>
-      <button class="Submit">Sign up</button>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="resources/logo.png" alt="CodeCracker Logo">
+            CodeCracker</div>
+        <nav>
+            <ul>
+                <li><a href="Question_tracker.html">Question Tracker</a></li>
+                <li><a href="#">Event Tracker</a></li>
+                <li><a href="#">Profile Tracker</a></li>
+                <li>
+                    <button class="login-btn">
+                        <a href="login.html">Login</a>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-      <div class="separator">
-        <hr>
-        <p>or</p>
-        <hr>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Track, Compete, & Improve.</h1>
+        <p>CodeCrack helps you navigate and track your <br> coding journey to success</p>
+        <a href="Question_tracker.html" class="cta-button">Question Tracker</a>
+        <a href="#" class="cta-button2">Profile Tracker</a>
+    </section>
+    <!-- Hero Section Ending-->
 
-      <button class="google">Continue with Google</button>
-      <button class="github">GitHub</button>
+    <!-- Tracker Section -->
+     <section class="time-laps">
+        <h2>Track Your  Progress</h2>
+        <p>Track your time spent on mastering DSA concepts and see your journey from beginner to expert.</p>
+
+        <div class="graph">
+        <!-- Pie Chart -->
+        <div class="chart-container1">
+            <!-- <h3>Time Spent on DSA Topics</h3> -->
+            <canvas id="pieChart"></canvas>
+        </div>
+
+        <!-- Bar Chart -->
+        <div class="chart-container2">
+            <!-- <h3>Problems Solved (Difficulty-wise)</h3> -->
+            <canvas id="barChart"></canvas>
+        </div>
+        </div>
+     </section>
+
+    <!--linking Section-->
+    <section class="link-platform">
+        <h2>Your Favourite Coding Platforms</h2>
+        <p>Streamlined in CodeCracker to simplify your <br> coding journey</p>
+        <div class="link-image"></div>
+    </section>
+    <!-- Link Section Ending-->
+
+    <!-- Features Section -->
+    <!-- <section class="features">
+        <div class="feature"> 
+            <h2>Problem Tracking</h2>
+            <p>Keep track of problems solved across multiple platforms.</p>
+        </div>
+        <div class="feature">
+            <h2>Contest Reminders</h2>
+            <p>Never miss a coding contest. Stay ahead with alerts.</p>
+        </div>
+        <div class="feature">
+            <h2>Leaderboard & Stats</h2>
+            <p>Compare your progress with friends and global coders.</p>
+        </div>
+    </section> -->
+
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <button class="faq-question">How do I update my profile name?</button>
+            <div class="faq-answer">To change your profile name, go to the Settings page in your dashboard, find the Profile Details section, update your name, and click Save</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Why am I getting a yellow warning and unable to retrieve my profile handle?</button>
+            <div class="faq-answer">A yellow warning typically means there’s an issue retrieving your profile handle. Possible reasons include:
+                <br>
+                <br>Incorrect username entry.
+                <br>Temporary API connectivity issues.
+                <br>Privacy settings that restrict access.
+                <br>
+                <br>Ensure your profile is set to public, double-check your handle, and try again later.
+                
+                </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Which coding websites can I link to my profile?</button>
+            <div class="faq-answer">You can connect your profile to popular platforms like LeetCode, CodeForces, CodeChef, GeeksforGeeks, AtCoder, and HackerRank. Visit the Connected Platforms section for the full list.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How can I link my coding profiles from various platforms?</button>
+            <div class="faq-answer">To connect your profiles:
+                <br>
+                <br>Open Settings > Connected Accounts.
+                <br>Enter your username for each platform.
+                <br>Click Verify & Save to complete the connection.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What should I do if my LeetCode profile isn’t connecting?</button>
+            <div class="faq-answer">Make sure your LeetCode account is public.
+                <br>Verify that your username is correctly entered.
+                <br>Wait a few minutes and try again if there’s a temporary issue.
+                <br>If the issue persists, contact our support team.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What is the Dynamic Profile Page, and how does it function?</button>
+            <div class="faq-answer">The Dynamic Profile Page continuously updates based on your latest coding submissions and milestones, helping you track progress in real time.
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Firebase JS SDK -->
-  <script type="module">
-    // Import Firebase SDKs
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-    import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
-    // Firebase config
-    const firebaseConfig = {
-      apiKey: "AIzaSyBGMT3v_6fopeh78Ze44AJIPPBM-4FczFM",
-      authDomain: "codecracker-7e97a.firebaseapp.com",
-      projectId: "codecracker-7e97a",
-      storageBucket: "codecracker-7e97a.appspot.com",
-      messagingSenderId: "747903395548",
-      appId: "1:747903395548:web:5e6fb1dd81f751927cf619",
-      measurementId: "G-PZXD0YT8ND"
-    };
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CodeCracker. All rights reserved.</p>
+    </footer>
 
-    const googleBtn = document.querySelector(".google");
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/index.js"></script>
 
-    googleBtn.addEventListener("click", async () => {
-      const provider = new GoogleAuthProvider();
-      try {
-        const result = await signInWithPopup(auth, provider);
-        const user = result.user;
-
-        // Save to Firestore
-        await setDoc(doc(db, "users", user.uid), {
-          email: user.email,
-          name: user.displayName,
-          uid: user.uid,
-          joinedAt: new Date().toISOString()
-        });
-
-        // Redirect to home.html
-        window.location.href = "home.html";
-      } catch (error) {
-        console.error("Google Sign-In Error:", error);
-        alert("Google sign-in failed. Please try again.");
-      }
-    });
-  </script>
 </body>
 </html>
