@@ -1,0 +1,84 @@
+    <!--tracker-->
+    <section class="time-lapse">
+        <h2>Track Your  Progress</h2>
+        <p>Track your time spent on mastering DSA concepts and see your journey from beginner to expert.</p>
+    
+        <!-- Pie Chart -->
+        <div class="chart-container">
+            <h3>Time Spent on DSA Topics</h3>
+            <canvas id="pieChart"></canvas>
+        </div>
+    
+        <!-- Bar Chart -->
+        <div class="chart-container">
+            <h3>Problems Solved (Difficulty-wise)</h3>
+            <canvas id="barChart"></canvas>
+        </div>
+    
+        <!-- Line Chart -->
+        <!-- <div class="chart-container">
+            <h3>Learning Time Over Time</h3>
+            <canvas id="lineChart"></canvas>
+        </div> -->
+    
+        <div class="time-lapse-description">
+            <p>Our time-lapse feature will visually display how your time spent learning different DSA topics helps you level up. Watch your progress as you solve problems and unlock new levels!</p>
+        </div>
+    </section>
+    
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        // Pie Chart - Time Spent on DSA Topics
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Arrays', 'Graphs', 'Dynamic Programming', 'Recursion', 'Sorting & Searching'],
+                datasets: [{
+                    data: [25, 20, 15, 10, 30], // Adjust values as needed
+                    backgroundColor: ['#ff6384', '#36a2eb', '#ffcd56', '#4bc0c0', '#9966ff'],
+                }]
+            }
+        });
+    
+        // Bar Chart - Problems Solved
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Easy', 'Medium', 'Hard'],
+                datasets: [{
+                    label: 'Problems Solved',
+                    data: [50, 30, 10], // Adjust values
+                    backgroundColor: ['#ffcd56', '#36a2eb', '#ff6384'],
+                }]
+            }
+        });
+    
+        // Line Chart - Learning Time Over Time
+        const lineCtx = document.getElementById('lineChart').getContext('2d');
+        new Chart(lineCtx, {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [{
+                    label: 'Hours Spent',
+                    data: [5, 10, 15, 20], // Adjust values
+                    borderColor: '#36a2eb',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    fill: true
+                }]
+            }
+        });
+    </script>
+    
+    <!-- CSS for Chart Containers -->
+    <!-- <style>
+        .chart-container {
+            width: 40%;
+            margin: 20px auto;
+            text-align: center;
+        }
+    </style> -->

@@ -1,0 +1,54 @@
+.time-lapse{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.time-lapse .chart-container {
+    width: 40%;
+    aspect-ratio: 1.6;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px; /* Adjust width as needed */
+    margin: auto;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.time-lapse h2 {
+    margin-bottom: 10px;
+}
+
+.time-lapse p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+
+.charts-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.chart-container {
+    flex: 1;
+    min-width: 300px; /* Ensures responsiveness */
+    max-width: 350px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.time-lapse-description {
+    margin-top: 20px;
+    font-size: 14px;
+}

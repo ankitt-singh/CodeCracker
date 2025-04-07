@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Tracker | CodeCracker</title>
+    <link rel="icon" type="image/png" href="resources/logo.png">
+    <link rel="stylesheet" href="Question_tracker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="resources/logo.png" alt="CodeCracker Logo">
+            CodeCracker</div>
+        <nav>
+            <ul>
+                <li><a href="Question_tracker.html">Question Tracker</a></li>
+                <li><a href="#">Event Tracker</a></li>
+                <li><a href="#">Profile Tracker</a></li>
+                <li>
+                    <button class="login-btn">
+                        <a href="index.html">Login</a>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>My Workspace</h2>
+            <ul>
+                <li class="active">📑 Explore Sheets</li>
+                <li>📄 My Sheets</li>
+                <li>📝 Notes</li>
+                <li>📊 Analysis</li>
+            </ul>
+            <!-- <div class="extension">
+                <p>🟠 Try Codolio Extension</p>
+                <small>With a single click, add to your workspace.</small>
+            </div> -->
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h1>Track Coding Sheets in One Place</h1>
+            <p>Choose from 30+ structured coding paths</p>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search any coding sheet">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="tabs">
+                <button class="active">All</button>
+                <button>Popular</button>
+                <button>Quick Revision</button>
+                <button>Complete DSA</button>
+                <button>Topic Specific</button>
+                <button>Competitive</button>
+            </div>
+
+            <!-- Coding Sheets Grid -->
+            <section class="sheets-grid">
+                <div class="sheet-card">
+                    <a href="../questionSheet/striverSdeSheet.html">
+                    <h3>Striver SDE Sheet</h3>
+                    <p>SDE Sheet contains very handily crafted and picked top coding problems.</p>
+                    <span>Total: 191</span>
+                    <button>Follow</button>
+                    </a>
+                </div>
+                <div class="sheet-card">
+                    <h3>Love Babbar Sheet</h3>
+                    <p>The DSA sheet by Love Babbar is designed to cover almost everything.</p>
+                    <span>Total: 430</span>
+                    <button>Follow</button>
+                </div>
+                <div class="sheet-card">
+                    <h3>Top Interview 150</h3>
+                    <p>The Top 150 sheet, curated by LeetCode, features the most asked interview problems.</p>
+                    <span>Total: 150</span>
+                    <button>Follow</button>
+                </div>
+                <div class="sheet-card">
+                    <h3>Blind 75</h3>
+                    <p>The Blind 75 sheet includes a curated list of 75 frequent coding questions.</p>
+                    <span>Total: 75</span>
+                    <button>Follow</button>
+                </div>
+                <!-- <div class="sheet-card">
+                    <h3>Neetcode 150</h3>
+                    <p>The Neetcode 150 sheet, curated by Navdeep Singh, is a popular coding resource.</p>
+                    <span>Total: 150</span>
+                    <button>Follow</button>
+                </div> -->
+                <!-- <div class="sheet-card">
+                    <h3>DP Mastery Sheet</h3>
+                    <p>This comprehensive DP sheet is designed for anyone looking to master dynamic programming.</p>
+                    <span>Total: 67</span>
+                    <button>Follow</button>
+                </div> -->
+            </section>
+
+            <button class="show-more">Show More</button>
+        </main>
+    </div>
+
+
+</body>
+</html>

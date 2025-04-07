@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Striver SDE Sheet</title>
+    <link rel="icon" type="image/png" href="resources/logo.png">
+    <link rel="stylesheet" href="questionSheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+     <!-- Navigation Bar -->
+     <header>
+        <div class="logo">
+            <img src="../resources/logo.png" alt="CodeCracker Logo">
+            CodeCracker</div>
+        <nav>
+            <ul>
+                <li><a href="../Question_tracker.html">Question Tracker</a></li>
+                <li><a href="#">Event Tracker</a></li>
+                <li><a href="#">Profile Tracker</a></li>
+                <li>
+                    <button class="login-btn">
+                        <a href="../login.html">Login</a>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>My Workspace</h2>
+            <ul>
+                <li class="active">📑 Explore Sheets</li>
+                <li>📄 My Sheets</li>
+                <li>📝 Notes</li>
+                <li>📊 Analysis</li>
+            </ul>
+            <!-- <div class="extension">
+                <p>🟠 Try Codolio Extension</p>
+                <small>With a single click, add to your workspace.</small>
+            </div> -->
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- <h1>Track Coding Sheets in One Place</h1>
+            <p>Choose from 30+ structured coding paths</p> -->
+
+            <!-- About Tabs -->
+            <div class="aboutsheet">
+                <div id="content">
+                <h3>Striver SDE Sheet</h3>
+                <p>Striver SDE Sheet contains very handily crafted and picked top coding interview questions from different topics of Data Structures & Algorithms. These questions are one of the most asked coding interview questions in coding interviews of companies like Google, Amazon, Microsoft, Facebook, Swiggy, Flipkart, etc, and cover almost all of the concepts related to Data Structure & Algorithms.</p>
+                <button>Follow</button>
+                </div>
+                <div id="questionCount">
+                    <div class="statItem">Solved Questions <span id="solved-count">0</span></div>
+                    <div class="statItem">Unsolved Questions <span id="unsolved-count">191</span></div>
+                    <div class="statItem">Total Questions <span id="total-count">191</span></div>
+                </div>
+            </div>
+
+            <!-- Coding Sheets Grid -->
+            <section class="sheets-grid">
+                <!-- Arrays -->
+                <div class="array">
+                  <h2 onclick = "toggleQuestions()"> Arrays</h2>
+                  <div id="questions-container" class="hidden">
+                    <div id="questions">
+                    <input type="checkbox" id="matrix-zero" name="Set Matrix Zeros" value="question1">
+                    <label for="Set Matrix Zeros">Set Matrix Zeros</label><br>
+                    </div>
+
+                    <div id="questions">
+                    <input type="checkbox" id="pascal" name="Pascal's Triangle" value="question1">
+                    <label for="pascal">Pascal's Triangle</label><br>
+                    </div>
+
+                    <div id="questions">
+                    <input type="checkbox" id="permutation" name="Next Permutation" value="question3">
+                    <label for="permutation">Next Permutation</label><br>
+                    </div>
+
+                    <div id="questions">
+                    <input type="checkbox" id="kadane" name="Kadane's Algorithm" value="question4">
+                    <label for="kadane">Kadane's Algorithm</label><br>
+                    </div>
+
+                    <div id="questions">
+                    <input type="checkbox" id="sort-array" name="Sort an array of 0's, 1's and 2's" value="question5">
+                    <label for="sort-array">Sort an array of 0's, 1's and 2's</label><br>
+                    </div>
+
+                    <div id="questions">
+                    <input type="checkbox" id="stock" name="Stock Buy and Sell" value="question6">
+                    <label for="stock">Stock Buy and Sell</label><br>
+                    </div>
+                
+                  </div> 
+                </div>
+
+                <!-- Arrays Part-II -->
+                <div class="array">
+                    <h2 onclick="toggleQuestions()">Arrays Part-II</h2>
+                    <div id="questions-container" class="hidden">
+                        <div id="questions">
+                        <input type="checkbox" id="rotate-matrix" name="Rotate Matrix" value="question1">
+                        <label for="Rotate Matrix">Rotate Matrix</label><br>
+                        </div>
+
+                        <div id="questions">
+                        <input type="checkbox" id="merge-overlapping-subintervals" name="Merge Overlapping Subintervals" value="question2">
+                        <label for="Merge Overlapping Subintervals">Merge Overlapping Subintervals</label><br>
+                        </div>
+
+                        <div id="questions">
+                        <input type="checkbox" id="merge-two-sorted-arrays" name="Merge two sorted arrays without extra space" value="question3">
+                        <label for="Merge two sorted arrays without extra space">Merge two sorted arrays without extra space</label><br>
+                        </div>
+
+                        <div id="questions">
+                        <input type="checkbox" id="find-duplicate" name="Find the duplicate in an array of N+1 integers" value="question4">
+                        <label for="Find the duplicate in an array of N+1 integers">Find the duplicate in an array of N+1 integers</label><br>
+                        </div>
+
+                        <div id="questions">
+                        <input type="checkbox" id="repeat-missing-number" name="Repeat and Missing Number" value="question5">
+                        <label for="Repeat and Missing Number">Repeat and Missing Number</label><br>
+                        </div>
+
+                        <div id="questions">
+                        <input type="checkbox" id="inversion-of-array" name="Inversion of Array (Pre-req: Merge Sort)" value="question6">
+                        <label for="Inversion of Array (Pre-req: Merge Sort)">Inversion of Array (Pre-req: Merge Sort)</label><br>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Arrays Part-III -->
+                <div class="array">
+                    <h2 onclick="toggleQuestions()">Arrays Part-III</h2>
+                    <div id="questions-container" class="hidden">
+                        <div id="questions">
+                        <input type="checkbox" id="search-2d-matrix" name="Search in a 2D matrix" value="question1">
+                        <label for="Search in a 2D matrix">Search in a 2D matrix</label><br>
+                        <input type="checkbox" id="row-x-n" name="row(x, n)" value="question2">
+                        <label for="row(x, n)">row(x, n)</label><br>
+                        <input type="checkbox" id="majority-element-n2" name="Majority Element (>n/2 times)" value="question3">
+                        <label for="Majority Element (>n/2 times)">Majority Element (>n/2 times)</label><br>
+                        <input type="checkbox" id="majority-element-n3" name="Majority Element (n/3 times)" value="question4">
+                        <label for="Majority Element (n/3 times)">Majority Element (n/3 times)</label><br>
+                        <input type="checkbox" id="grid-unique-paths" name="Grid Unique Paths" value="question5">
+                        <label for="Grid Unique Paths">Grid Unique Paths</label><br>
+                        <input type="checkbox" id="reverse-pairs" name="Reverse Pairs (Leetcode)" value="question6">
+                        <label for="Reverse Pairs (Leetcode)">Reverse Pairs (Leetcode)</label><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arrays Part-IV -->
+                <div class="array">
+                    <h2 onclick="toggleQuestions()">Arrays Part-IV</h2>
+                    <div id="questions-container" class="hidden">
+                        <div id="questions">
+                            <input type="checkbox" id="2sum-problem" name="2Sum Problem" value="question1">
+                            <label for="2Sum Problem">2Sum Problem</label><br>
+                            <input type="checkbox" id="4sum-problem" name="4-Sum Problem" value="question2">
+                            <label for="4-Sum Problem">4-Sum Problem</label><br>
+                            <input type="checkbox" id="longest-consecutive-sequence" name="Longest Consecutive Sequence" value="question3">
+                            <label for="Longest Consecutive Sequence">Longest Consecutive Sequence</label><br>
+                            <input type="checkbox" id="largest-subarray-k-sum" name="Largest Subarray with K sum" value="question4">
+                            <label for="Largest Subarray with K sum">Largest Subarray with K sum</label><br>
+                            <input type="checkbox" id="count-subarrays-xor-k" name="Count number of subarrays with given xor K" value="question5">
+                            <label for="Count number of subarrays with given xor K">Count number of subarrays with given xor K</label><br>
+                            <input type="checkbox" id="longest-substring-no-repeat" name="Longest Substring without repeat" value="question6">
+                            <label for="Longest Substring without repeat">Longest Substring without repeat</label><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Linked List -->
+                <div class="array">
+                    <h2 onclick="toggleQuestions()">Linked List</h2>
+                    <div id="questions-container" class="hidden">
+                        <div id="questions">
+                            <input type="checkbox" id="reverse-linkedlist" name="Reverse a LinkedList" value="question1">
+                            <label for="Reverse a LinkedList">Reverse a LinkedList</label><br>
+                            <input type="checkbox" id="middle-linkedlist" name="Find the middle of LinkedList" value="question2">
+                            <label for="Find the middle of LinkedList">Find the middle of LinkedList</label><br>
+                            <input type="checkbox" id="merge-two-sorted-linkedlist" name="Merge two sorted Linked List (use method used in mergeSort)" value="question3">
+                            <label for="Merge two sorted Linked List (use method used in mergeSort)">Merge two sorted Linked List (use method used in mergeSort)</label><br>
+                            <input type="checkbox" id="remove-nth-node" name="Remove N-th node from back of LinkedList" value="question4">
+                            <label for="Remove N-th node from back of LinkedList">Remove N-th node from back of LinkedList</label><br>
+                            <input type="checkbox" id="add-two-numbers-linkedlist" name="Add two numbers as LinkedList" value="question5">
+                            <label for="Add two numbers as LinkedList">Add two numbers as LinkedList</label><br>
+                            <input type="checkbox" id="delete-given-node" name="Delete a given Node when a node is given.(0(1) solution)" value="question6">
+                            <label for="Delete a given Node when a node is given.(0(1) solution)">Delete a given Node when a node is given.(0(1) solution)</label><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Linked List Part-II -->
+                <div class="array">
+                    <h2 onclick="toggleQuestions()">Linked List Part-II</h2>
+                    <div id="questions-container" class="hidden">
+                        <div id="questions">
+                            <input type="checkbox" id="intersection-point" name="Find intersection point of Y LinkedList" value="question1">
+                            <label for="Find intersection point of Y LinkedList">Find intersection point of Y LinkedList</label><br>
+                            <input type="checkbox" id="detect-cycle" name="Detect a cycle in Linked List" value="question2">
+                            <label for="Detect a cycle in Linked List">Detect a cycle in Linked List</label><br>
+                            <input type="checkbox" id="reverse-linkedlist-groups" name="Reverse a LinkedList in groups of size k." value="question3">
+                            <label for="Reverse a LinkedList in groups of size k.">Reverse a LinkedList in groups of size k.</label><br>
+                            <input type="checkbox" id="check-palindrome" name="Check if a LinkedList is palindrome or not." value="question4">
+                            <label for="Check if a LinkedList is palindrome or not.">Check if a LinkedList is palindrome or not.</label><br>
+                            <input type="checkbox" id="starting-point-loop" name="Find the starting point of the Loop of LinkedList" value="question5">
+                            <label for="Find the starting point of the Loop of LinkedList">Find the starting point of the Loop of LinkedList</label><br>
+                            <input type="checkbox" id="flattening-linkedlist" name="Flattening of a LinkedList" value="question6">
+                            <label for="Flattening of a LinkedList">Flattening of a LinkedList</label><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Linked List and Arrays -->
+                <div class="array">
+                    <h2 onclick="toggleQuestions()">Linked List and Arrays</h2>
+                    <div id="questions-container" class="hidden">
+                        <div id="questions">
+                            <input type="checkbox" id="rotate-linkedlist" name="Rotate a LinkedList" value="question1">
+                            <label for="Rotate a LinkedList">Rotate a LinkedList</label><br>
+                            <input type="checkbox" id="clone-linkedlist" name="Clone a Linked List with random and next pointer" value="question2">
+                            <label for="Clone a Linked List with random and next pointer">Clone a Linked List with random and next pointer</label><br>
+                            <input type="checkbox" id="3-sum" name="3 sum" value="question3">
+                            <label for="3 sum">3 sum</label><br>
+                            <input type="checkbox" id="trapping-rainwater" name="Trapping Rainwater" value="question4">
+                            <label for="Trapping Rainwater">Trapping Rainwater</label><br>
+                            <input type="checkbox" id="remove-duplicate-sorted-array" name="Remove Duplicate from Sorted array" value="question5">
+                            <label for="Remove Duplicate from Sorted array">Remove Duplicate from Sorted array</label><br>
+                            <input type="checkbox" id="max-consecutive-ones" name="Max consecutive ones" value="question6">
+                            <label for="Max consecutive ones">Max consecutive ones</label><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Greedy Algorithm -->
+                <div class="array">
+                    <h2 onclick="toggleQuestions()">Greedy Algorithm</h2>
+                    <div id="questions-container" class="hidden">
+                        <div id="questions">
+                            <input type="checkbox" id="n-meetings" name="N meetings in one room" value="question1">
+                            <label for="N meetings in one room">N meetings in one room</label><br>
+                            <input type="checkbox" id="min-platforms" name="Minimum number of platforms required for a railway" value="question2">
+                            <label for="Minimum number of platforms required for a railway">Minimum number of platforms required for a railway</label><br>
+                            <input type="checkbox" id="job-sequencing" name="Job sequencing Problem" value="question3">
+                            <label for="Job sequencing Problem">Job sequencing Problem</label><br>
+                            <input type="checkbox" id="fractional-knapsack" name="Fractional Knapsack Problem" value="question4">
+                            <label for="Fractional Knapsack Problem">Fractional Knapsack Problem</label><br>
+                            <input type="checkbox" id="min-coins" name="Greedy algorithm to find minimum number of coins" value="question5">
+                            <label for="Greedy algorithm to find minimum number of coins">Greedy algorithm to find minimum number of coins</label><br>
+                            <input type="checkbox" id="assign-cookies" name="Assign Cookies" value="question6">
+                            <label for="Assign Cookies">Assign Cookies</label><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recursion -->
+                <div class="array">
+                    <h2 onclick="toggleQuestions()">Recursion</h2>
+                    <div id="questions-container" class="hidden">
+                        <div id="questions">
+                            <input type="checkbox" id="subset-sums" name="Subset Sums" value="question1">
+                            <label for="Subset Sums">Subset Sums</label><br>
+                            <input type="checkbox" id="subset-ii" name="Subset-II" value="question2">
+                            <label for="Subset-II">Subset-II</label><br>
+                            <input type="checkbox" id="combination-sum-1" name="Combination sum-1" value="question3">
+                            <label for="Combination sum-1">Combination sum-1</label><br>
+                            <input type="checkbox" id="combination-sum-2" name="Combination sum-2" value="question4">
+                            <label for="Combination sum-2">Combination sum-2</label><br>
+                            <input type="checkbox" id="palindrome-partitioning" name="Palindrome Partitioning" value="question5">
+                            <label for="Palindrome Partitioning">Palindrome Partitioning</label><br>
+                            <input type="checkbox" id="kth-permutation" name="K-th permutation Sequence" value="question6">
+                            <label for="K-th permutation Sequence">K-th permutation Sequence</label><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recursion and Backtracking -->
+                <div class="array">
+                    <h2 onclick="toggleQuestions()">Recursion and Backtracking</h2>
+                    <div id="questions-container" class="hidden">
+                        <div id="questions">
+                            <input type="checkbox" id="permutations-string-array" name="Print all permutations of a string/array" value="question1">
+                            <label for="Print all permutations of a string/array">Print all permutations of a string/array</label><br>
+                            <input type="checkbox" id="n-queens" name="N queens Problem" value="question2">
+                            <label for="N queens Problem">N queens Problem</label><br>
+                            <input type="checkbox" id="sudoku-solver" name="Sudoko Solver" value="question3">
+                            <label for="Sudoko Solver">Sudoko Solver</label><br>
+                            <input type="checkbox" id="m-coloring" name="M Coloring Problem" value="question4">
+                            <label for="M Coloring Problem">M Coloring Problem</label><br>
+                            <input type="checkbox" id="rat-in-maze" name="Rat in a Maze" value="question5">
+                            <label for="Rat in a Maze">Rat in a Maze</label><br>
+                            <input type="checkbox" id="word-break" name="Word Break (print all ways)" value="question6">
+                            <label for="Word Break (print all ways)">Word Break (print all ways)</label><br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Binary Search -->
+                <div class="array">
+                    <h2 onclick="toggleQuestions()">Binary Search</h2>
+                    <div id="questions-container" class="hidden">
+                        <div id="questions">
+                            <input type="checkbox" id="nth-root" name="The N-th root of an integer" value="question1">
+                            <label for="The N-th root of an integer">The N-th root of an integer</label><br>
+                            <input type="checkbox" id="matrix-median" name="Matrix Median" value="question2">
+                            <label for="Matrix Median">Matrix Median</label><br>
+                            <input type="checkbox" id="element-appears-once" name="Find the element that appears once in a sorted array, and the rest element appears twice (Binary search)" value="question3">
+                            <label for="Find the element that appears once in a sorted array, and the rest element appears twice (Binary search)">Find the element that appears once in a sorted array, and the rest element appears twice (Binary search)</label><br>
+                            <input type="checkbox" id="search-rotated-array" name="Search element in a sorted and rotated array/ find pivot where it is rotated" value="question4">
+                            <label for="Search element in a sorted and rotated array/ find pivot where it is rotated">Search element in a sorted and rotated array/ find pivot where it is rotated</label><br>
+                            <input type="checkbox" id="median-two-sorted-arrays" name="Median of 2 sorted arrays" value="question5">
+                            <label for="Median of 2 sorted arrays">Median of 2 sorted arrays</label><br>
+                            <input type="checkbox" id="kth-element-two-sorted-arrays" name="K-th element of two sorted arrays" value="question6">
+                            <label for="K-th element of two sorted arrays">K-th element of two sorted arrays</label><br>
+                            <input type="checkbox" id="allocate-min-pages" name="Allocate Minimum Number of Pages" value="question7">
+                            <label for="Allocate Minimum Number of Pages">Allocate Minimum Number of Pages</label><br>
+                            <input type="checkbox" id="aggressive-cows" name="Aggressive Cows" value="question8">
+                            <label for="Aggressive Cows">Aggressive Cows</label><br>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <script src="../js/questionSheets.js"></script>
+
+
+</body>
+</html>
