@@ -16,33 +16,76 @@
         </video>
         <p>Welcome to <br> CodeCracker Community</p>
     </div>
-            <div class="login-credential">
-                <!-- <div class="video-container">
-                    <video autoplay muted loop class="background-video">
-                        <source src="CodeCracker login video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div> -->
-                <h2>Join us <br> Create a CodeCracker account</h2>
-                <div class="credential-info">
-                      <!-- <input type="text" class="name" placeholder="Full Name">
-                      <input type="email" class="email" placeholder="Email">
-                      <input type="password" class="passward" placeholder="Your password">
-                      <button class="Submit">Sign up</button>
+    <div class="login-credential">
+        <!-- <div class="video-container">
+            <video autoplay muted loop class="background-video">
+                <source src="CodeCracker login video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div> -->
+        <h2>Join us <br> Create a CodeCracker account</h2>
+        <div class="credential-info">
+              <!-- <input type="text" class="name" placeholder="Full Name">
+              <input type="email" class="email" placeholder="Email">
+              <input type="password" class="passward" placeholder="Your password">
+              <button class="Submit">Sign up</button>
 
-                      <div class="separator">
-                        <hr>
-                        <p>or</p>
-                        <hr>
-                    </div> -->
-            
-                    <button class="google"><i class="fa-brands fa-google"></i>Continue with Google</button>
-                    <button class="github"><i class="fa-brands fa-github"></i>GitHub</button>
-              </div>
-            </div>
+              <div class="separator">
+                <hr>
+                <p>or</p>
+                <hr>
+            </div> -->
+    
+            <button class="google"><i class="fa-brands fa-google"></i>Continue with Google</button>
+            <button class="github"><i class="fa-brands fa-github"></i>GitHub</button>
+      </div>
+    </div>
 
-            <script src="login.js"></script>
+    <script src="login.js"></script>
 
+    <!-- Firebase and Google Auth Script -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+      import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyBGMT3v_6fopeh78Ze44AJIPPBM-4FczFM",
+        authDomain: "codecracker-7e97a.firebaseapp.com",
+        projectId: "codecracker-7e97a",
+        storageBucket: "codecracker-7e97a.appspot.com",
+        messagingSenderId: "747903395548",
+        appId: "1:747903395548:web:5e6fb1dd81f751927cf619"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      document.querySelector(".google").addEventListener("click", async () => {
+        const provider = new GoogleAuthProvider();
+
+        try {
+          const result = await signInWithPopup(auth, provider);
+          const user = result.user;
+
+          // Save user data to Firestore
+          await setDoc(doc(db, "users", user.uid), {
+            uid: user.uid,
+            name: user.displayName,
+            email: user.email,
+            photoURL: user.photoURL,
+            joinedAt: new Date().toISOString()
+          });
+
+          // Redirect to home page
+          window.location.href = "index.html";
+        } catch (error) {
+          console.error("Google Sign-In Error:", error);
+          alert("Sign-in failed. Please check the console for more info.");
+        }
+      });
+    </script>
 
 </body>
 </html>
