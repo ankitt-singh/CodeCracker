@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeCracker AI</title>
+    <link rel="stylesheet" href="ai.css">
+</head>
+<body>
+    <div class="chat-container">
+        <h2><img src="resources/logo.png" alt="logo"></h2>
+        <div id="chat-box" class="chat-box"></div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Ask something..." />
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <!-- Add the Google AI SDK -->
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+        </script>
+    
+        <!-- Your script, now as a module -->
+
+    <script type="module" src="ai.js"></script>
+</body>
+</html>

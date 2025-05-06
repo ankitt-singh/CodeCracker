@@ -47,6 +47,17 @@ nav ul li a {
     font-size: 16px;
 }
 
+/* Thunderstorm emoji cursor */
+.ai-link:hover {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='40' width='40'><text y='20' font-size='20'>⚡</text></svg>") 16 16, auto;
+}
+
+/* .ai-link:hover {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: underline;
+} */
+
 .login-btn{
     background-color: #ff8c00;
     color: white;

@@ -1,0 +1,149 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#fff;
+    margin: 0;
+}
+
+.chat-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-container h2 {
+    /* background-color: #4a90e2; */
+    color: rgb(12, 12, 12);
+    padding: 15px;
+    margin: 0;
+    text-align: right;
+    font-size: 2em;
+}
+.chat-container h2 img{
+    height: 60px;
+    text-align: center;
+    
+}
+
+.chat-box {
+    flex-grow: 1; /* Allow chat box to take available space */
+    height: 450px; /* Fixed height for scroll */
+    overflow-y: auto; /* Enable scrolling */
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column; /* Stack messages vertically */
+    gap: 10px; /* Space between messages */
+}
+
+.message {
+    padding: 8px 12px;
+    border-radius: 15px;
+    max-width: 80%;
+    line-height: 1.4;
+    word-wrap: break-word; /* Break long words */
+}
+
+.user-message {
+    background-color: #e1f5fe; /* Light blue for user */
+    color: #333;
+    align-self: flex-end; /* Align user messages to the right */
+    border-bottom-right-radius: 5px; /* Style corners */
+}
+
+.ai-message {
+    background-color: #f0f0f0; /* Light grey for AI */
+    color: #333;
+    align-self: flex-start; /* Align AI messages to the left */
+    border-bottom-left-radius: 5px; /* Style corners */
+}
+
+.ai-message strong {
+    color: #ff8c00; /* Make AI name stand out */
+}
+
+.ai-message code {
+    background-color: #e0e0e0;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.ai-message pre {
+    background-color: #2d2d2d; /* Dark background for code blocks */
+    color: #f0f0f0; /* Light text */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto; /* Allow horizontal scrolling for long code lines */
+    font-family: monospace;
+    white-space: pre-wrap; /* Wrap lines within the pre block */
+    word-wrap: break-word; /* Ensure long unbroken lines also wrap */
+}
+
+.ai-message pre code {
+    background-color: transparent; /* Code inside pre doesn't need extra background */
+    padding: 0;
+}
+
+
+.system-message {
+    color: #888;
+    font-style: italic;
+    font-size: 0.9em;
+    text-align: center;
+    width: 100%; /* Span full width */
+}
+
+.message.loading {
+    font-style: italic;
+    color: #888;
+}
+
+
+.input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #eee; /* Separator line */
+}
+
+#user-input {
+    flex-grow: 1; /* Take available space */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+#user-input:disabled {
+    background-color: #f8f8f8;
+}
+
+
+#send-button {
+    padding: 10px 20px;
+    background-color: #ef9e3a;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+#send-button:hover {
+    background-color: #ff8c00;
+}
+
+#send-button:disabled {
+    background-color: #a0c7e8;
+    cursor: not-allowed;
+}
