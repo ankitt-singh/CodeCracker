@@ -17,12 +17,12 @@
         <nav>
             <ul>
                 <li><a href="../Question_tracker.html">Question Tracker</a></li>
-                <li><a href="#">Event Tracker</a></li>
-                <li><a href="#">Profile Tracker</a></li>
+                <li><a href="/eventTracker.html">Event Tracker</a></li>
+                <li><a href="/ask_codecracker.html">CodeCracker AI</a></li>
                 <li>
-                    <button class="login-btn">
+                    <!-- <button class="login-btn">
                         <a href="../login.html">Login</a>
-                    </button>
+                    </button> -->
                 </li>
             </ul>
         </nav>
@@ -34,9 +34,9 @@
             <h2>My Workspace</h2>
             <ul>
                 <li class="active">📑 Explore Sheets</li>
-                <li>📄 My Sheets</li>
+                <!-- <li>📄 My Sheets</li>
                 <li>📝 Notes</li>
-                <li>📊 Analysis</li>
+                <li>📊 Analysis</li> -->
             </ul>
             <!-- <div class="extension">
                 <p>🟠 Try Codolio Extension</p>
@@ -67,267 +67,406 @@
             <section class="sheets-grid">
                 <!-- Arrays -->
                 <div class="array">
-                  <h2 onclick = "toggleQuestions()"> Arrays</h2>
+                  <h2 onclick="toggleQuestions()"> Arrays</h2>
                   <div id="questions-container" class="hidden">
                     <div id="questions">
                     <input type="checkbox" id="matrix-zero" name="Set Matrix Zeros" value="question1">
-                    <label for="Set Matrix Zeros">Set Matrix Zeros</label><br>
+                    <label for="Set Matrix Zeros"><a href="https://leetcode.com/problems/set-matrix-zeroes/" target="_blank">Set Matrix Zeros</a></label><br>
                     </div>
-
+            
                     <div id="questions">
                     <input type="checkbox" id="pascal" name="Pascal's Triangle" value="question1">
-                    <label for="pascal">Pascal's Triangle</label><br>
+                    <label for="pascal"><a href="https://leetcode.com/problems/pascals-triangle/" target="_blank">Pascal's Triangle</a></label><br>
                     </div>
-
+            
                     <div id="questions">
                     <input type="checkbox" id="permutation" name="Next Permutation" value="question3">
-                    <label for="permutation">Next Permutation</label><br>
+                    <label for="permutation"><a href="https://leetcode.com/problems/next-permutation/" target="_blank">Next Permutation</a></label><br>
                     </div>
-
+            
                     <div id="questions">
                     <input type="checkbox" id="kadane" name="Kadane's Algorithm" value="question4">
-                    <label for="kadane">Kadane's Algorithm</label><br>
+                    <label for="kadane"><a href="https://leetcode.com/problems/maximum-subarray/" target="_blank">Kadane's Algorithm</a></label><br>
                     </div>
-
+            
                     <div id="questions">
                     <input type="checkbox" id="sort-array" name="Sort an array of 0's, 1's and 2's" value="question5">
-                    <label for="sort-array">Sort an array of 0's, 1's and 2's</label><br>
+                    <label for="sort-array"><a href="https://leetcode.com/problems/sort-colors/" target="_blank">Sort an array of 0's, 1's and 2's</a></label><br>
                     </div>
-
+            
                     <div id="questions">
                     <input type="checkbox" id="stock" name="Stock Buy and Sell" value="question6">
-                    <label for="stock">Stock Buy and Sell</label><br>
+                    <label for="stock"><a href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock/" target="_blank">Stock Buy and Sell</a></label><br>
                     </div>
-                
                   </div> 
                 </div>
-
+            
                 <!-- Arrays Part-II -->
                 <div class="array">
                     <h2 onclick="toggleQuestions()">Arrays Part-II</h2>
                     <div id="questions-container" class="hidden">
                         <div id="questions">
                         <input type="checkbox" id="rotate-matrix" name="Rotate Matrix" value="question1">
-                        <label for="Rotate Matrix">Rotate Matrix</label><br>
+                        <label for="Rotate Matrix"><a href="https://leetcode.com/problems/rotate-image/" target="_blank">Rotate Matrix</a></label><br>
                         </div>
-
+            
                         <div id="questions">
                         <input type="checkbox" id="merge-overlapping-subintervals" name="Merge Overlapping Subintervals" value="question2">
-                        <label for="Merge Overlapping Subintervals">Merge Overlapping Subintervals</label><br>
+                        <label for="Merge Overlapping Subintervals"><a href="https://leetcode.com/problems/merge-intervals/" target="_blank">Merge Overlapping Subintervals</a></label><br>
                         </div>
-
+            
                         <div id="questions">
                         <input type="checkbox" id="merge-two-sorted-arrays" name="Merge two sorted arrays without extra space" value="question3">
-                        <label for="Merge two sorted arrays without extra space">Merge two sorted arrays without extra space</label><br>
+                        <label for="Merge two sorted arrays without extra space"><a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank">Merge two sorted arrays without extra space</a></label><br>
                         </div>
-
+            
                         <div id="questions">
                         <input type="checkbox" id="find-duplicate" name="Find the duplicate in an array of N+1 integers" value="question4">
-                        <label for="Find the duplicate in an array of N+1 integers">Find the duplicate in an array of N+1 integers</label><br>
+                        <label for="Find the duplicate in an array of N+1 integers"><a href="https://leetcode.com/problems/find-the-duplicate-number/" target="_blank">Find the duplicate in an array of N+1 integers</a></label><br>
                         </div>
-
+            
                         <div id="questions">
                         <input type="checkbox" id="repeat-missing-number" name="Repeat and Missing Number" value="question5">
-                        <label for="Repeat and Missing Number">Repeat and Missing Number</label><br>
+                        <label for="Repeat and Missing Number"><a href="https://www.geeksforgeeks.org/find-a-repeating-and-a-missing-number/" target="_blank">Repeat and Missing Number</a></label><br>
                         </div>
-
+            
                         <div id="questions">
                         <input type="checkbox" id="inversion-of-array" name="Inversion of Array (Pre-req: Merge Sort)" value="question6">
-                        <label for="Inversion of Array (Pre-req: Merge Sort)">Inversion of Array (Pre-req: Merge Sort)</label><br>
+                        <label for="Inversion of Array (Pre-req: Merge Sort)"><a href="https://www.geeksforgeeks.org/counting-inversions/" target="_blank">Inversion of Array (Pre-req: Merge Sort)</a></label><br>
                         </div>
-
                     </div>
                 </div>
-
+            
                 <!-- Arrays Part-III -->
                 <div class="array">
                     <h2 onclick="toggleQuestions()">Arrays Part-III</h2>
                     <div id="questions-container" class="hidden">
                         <div id="questions">
                         <input type="checkbox" id="search-2d-matrix" name="Search in a 2D matrix" value="question1">
-                        <label for="Search in a 2D matrix">Search in a 2D matrix</label><br>
+                        <label for="Search in a 2D matrix"><a href="https://leetcode.com/problems/search-a-2d-matrix/" target="_blank">Search in a 2D matrix</a></label><br>
+                        </div>
+            
+                        <div id="questions">
                         <input type="checkbox" id="row-x-n" name="row(x, n)" value="question2">
-                        <label for="row(x, n)">row(x, n)</label><br>
+                        <label for="row(x, n)"><a href="https://leetcode.com/problems/powx-n/" target="_blank">row(x, n)</a></label><br>
+                        </div>
+            
+                        <div id="questions">
                         <input type="checkbox" id="majority-element-n2" name="Majority Element (>n/2 times)" value="question3">
-                        <label for="Majority Element (>n/2 times)">Majority Element (>n/2 times)</label><br>
+                        <label for="Majority Element (>n/2 times)"><a href="https://leetcode.com/problems/majority-element/" target="_blank">Majority Element (>n/2 times)</a></label><br>
+                        </div>
+            
+                        <div id="questions">
                         <input type="checkbox" id="majority-element-n3" name="Majority Element (n/3 times)" value="question4">
-                        <label for="Majority Element (n/3 times)">Majority Element (n/3 times)</label><br>
+                        <label for="Majority Element (n/3 times)"><a href="https://leetcode.com/problems/majority-element-ii/" target="_blank">Majority Element (n/3 times)</a></label><br>
+                        </div>
+            
+                        <div id="questions">
                         <input type="checkbox" id="grid-unique-paths" name="Grid Unique Paths" value="question5">
-                        <label for="Grid Unique Paths">Grid Unique Paths</label><br>
+                        <label for="Grid Unique Paths"><a href="https://leetcode.com/problems/unique-paths/" target="_blank">Grid Unique Paths</a></label><br>
+                        </div>
+            
+                        <div id="questions">
                         <input type="checkbox" id="reverse-pairs" name="Reverse Pairs (Leetcode)" value="question6">
-                        <label for="Reverse Pairs (Leetcode)">Reverse Pairs (Leetcode)</label><br>
+                        <label for="Reverse Pairs (Leetcode)"><a href="https://leetcode.com/problems/reverse-pairs/" target="_blank">Reverse Pairs (Leetcode)</a></label><br>
                         </div>
                     </div>
                 </div>
-
+            
                 <!-- Arrays Part-IV -->
                 <div class="array">
                     <h2 onclick="toggleQuestions()">Arrays Part-IV</h2>
                     <div id="questions-container" class="hidden">
                         <div id="questions">
-                            <input type="checkbox" id="2sum-problem" name="2Sum Problem" value="question1">
-                            <label for="2Sum Problem">2Sum Problem</label><br>
-                            <input type="checkbox" id="4sum-problem" name="4-Sum Problem" value="question2">
-                            <label for="4-Sum Problem">4-Sum Problem</label><br>
-                            <input type="checkbox" id="longest-consecutive-sequence" name="Longest Consecutive Sequence" value="question3">
-                            <label for="Longest Consecutive Sequence">Longest Consecutive Sequence</label><br>
-                            <input type="checkbox" id="largest-subarray-k-sum" name="Largest Subarray with K sum" value="question4">
-                            <label for="Largest Subarray with K sum">Largest Subarray with K sum</label><br>
-                            <input type="checkbox" id="count-subarrays-xor-k" name="Count number of subarrays with given xor K" value="question5">
-                            <label for="Count number of subarrays with given xor K">Count number of subarrays with given xor K</label><br>
-                            <input type="checkbox" id="longest-substring-no-repeat" name="Longest Substring without repeat" value="question6">
-                            <label for="Longest Substring without repeat">Longest Substring without repeat</label><br>
+                        <input type="checkbox" id="2sum-problem" name="2Sum Problem" value="question1">
+                        <label for="2Sum Problem"><a href="https://leetcode.com/problems/two-sum/" target="_blank">2Sum Problem</a></label><br>
+                        </div>
+            
+                        <div id="questions">
+                        <input type="checkbox" id="4sum-problem" name="4-Sum Problem" value="question2">
+                        <label for="4-Sum Problem"><a href="https://leetcode.com/problems/4sum/" target="_blank">4-Sum Problem</a></label><br>
+                        </div>
+            
+                        <div id="questions">
+                        <input type="checkbox" id="longest-consecutive-sequence" name="Longest Consecutive Sequence" value="question3">
+                        <label for="Longest Consecutive Sequence"><a href="https://leetcode.com/problems/longest-consecutive-sequence/" target="_blank">Longest Consecutive Sequence</a></label><br>
+                        </div>
+            
+                        <div id="questions">
+                        <input type="checkbox" id="largest-subarray-k-sum" name="Largest Subarray with K sum" value="question4">
+                        <label for="Largest Subarray with K sum"><a href="https://www.geeksforgeeks.org/largest-subarray-with-equal-number-of-0s-and-1s/" target="_blank">Largest Subarray with K sum</a></label><br>
+                        </div>
+            
+                        <div id="questions">
+                        <input type="checkbox" id="count-subarrays-xor-k" name="Count number of subarrays with given xor K" value="question5">
+                        <label for="Count number of subarrays with given xor K"><a href="https://www.geeksforgeeks.org/count-number-subarrays-given-xor/" target="_blank">Count number of subarrays with given xor K</a></label><br>
+                        </div>
+            
+                        <div id="questions">
+                        <input type="checkbox" id="longest-substring-no-repeat" name="Longest Substring without repeat" value="question6">
+                        <label for="Longest Substring without repeat"><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank">Longest Substring without repeat</a></label><br>
                         </div>
                     </div>
                 </div>
-
+            
                 <!-- Linked List -->
                 <div class="array">
                     <h2 onclick="toggleQuestions()">Linked List</h2>
                     <div id="questions-container" class="hidden">
                         <div id="questions">
-                            <input type="checkbox" id="reverse-linkedlist" name="Reverse a LinkedList" value="question1">
-                            <label for="Reverse a LinkedList">Reverse a LinkedList</label><br>
-                            <input type="checkbox" id="middle-linkedlist" name="Find the middle of LinkedList" value="question2">
-                            <label for="Find the middle of LinkedList">Find the middle of LinkedList</label><br>
-                            <input type="checkbox" id="merge-two-sorted-linkedlist" name="Merge two sorted Linked List (use method used in mergeSort)" value="question3">
-                            <label for="Merge two sorted Linked List (use method used in mergeSort)">Merge two sorted Linked List (use method used in mergeSort)</label><br>
-                            <input type="checkbox" id="remove-nth-node" name="Remove N-th node from back of LinkedList" value="question4">
-                            <label for="Remove N-th node from back of LinkedList">Remove N-th node from back of LinkedList</label><br>
-                            <input type="checkbox" id="add-two-numbers-linkedlist" name="Add two numbers as LinkedList" value="question5">
-                            <label for="Add two numbers as LinkedList">Add two numbers as LinkedList</label><br>
-                            <input type="checkbox" id="delete-given-node" name="Delete a given Node when a node is given.(0(1) solution)" value="question6">
-                            <label for="Delete a given Node when a node is given.(0(1) solution)">Delete a given Node when a node is given.(0(1) solution)</label><br>
+                        <input type="checkbox" id="reverse-linkedlist" name="Reverse a LinkedList" value="question1">
+                        <label for="Reverse a LinkedList"><a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">Reverse a LinkedList</a></label><br>
+                        </div>
+            
+                        <div id="questions">
+                        <input type="checkbox" id="middle-linkedlist" name="Find the middle of LinkedList" value="question2">
+                        <label for="Find the middle of LinkedList"><a href="https://leetcode.com/problems/middle-of-the-linked-list/" target="_blank">Find the middle of LinkedList</a></label><br>
+                        </div>
+            
+                        <div id="questions">
+                        <input type="checkbox" id="merge-two-sorted-linkedlist" name="Merge two sorted Linked List (use method used in mergeSort)" value="question3">
+                        <label for="Merge two sorted Linked List (use method used in mergeSort)"><a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">Merge two sorted Linked List (use method used in mergeSort)</a></label><br>
+                        </div>
+            
+                        <div id="questions">
+                        <input type="checkbox" id="remove-nth-node" name="Remove N-th node from back of LinkedList" value="question4">
+                        <label for="Remove N-th node from back of LinkedList"><a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">Remove N-th node from back of LinkedList</a></label><br>
+                        </div>
+            
+                        <div id="questions">
+                        <input type="checkbox" id="add-two-numbers-linkedlist" name="Add two numbers as LinkedList" value="question5">
+                        <label for="Add two numbers as LinkedList"><a href="https://leetcode.com/problems/add-two-numbers/" target="_blank">Add two numbers as LinkedList</a></label><br>
+                        </div>
+            
+                        <div id="questions">
+                        <input type="checkbox" id="delete-given-node" name="Delete a given Node when a node is given.(0(1) solution)" value="question6">
+                        <label for="Delete a given Node when a node is given.(0(1) solution)"><a href="https://leetcode.com/problems/delete-node-in-a-linked-list/" target="_blank">Delete a given Node when a node is given.(0(1) solution)</a></label><br>
                         </div>
                     </div>
                 </div>
-
+            
                 <!-- Linked List Part-II -->
                 <div class="array">
                     <h2 onclick="toggleQuestions()">Linked List Part-II</h2>
                     <div id="questions-container" class="hidden">
                         <div id="questions">
-                            <input type="checkbox" id="intersection-point" name="Find intersection point of Y LinkedList" value="question1">
-                            <label for="Find intersection point of Y LinkedList">Find intersection point of Y LinkedList</label><br>
-                            <input type="checkbox" id="detect-cycle" name="Detect a cycle in Linked List" value="question2">
-                            <label for="Detect a cycle in Linked List">Detect a cycle in Linked List</label><br>
-                            <input type="checkbox" id="reverse-linkedlist-groups" name="Reverse a LinkedList in groups of size k." value="question3">
-                            <label for="Reverse a LinkedList in groups of size k.">Reverse a LinkedList in groups of size k.</label><br>
-                            <input type="checkbox" id="check-palindrome" name="Check if a LinkedList is palindrome or not." value="question4">
-                            <label for="Check if a LinkedList is palindrome or not.">Check if a LinkedList is palindrome or not.</label><br>
-                            <input type="checkbox" id="starting-point-loop" name="Find the starting point of the Loop of LinkedList" value="question5">
-                            <label for="Find the starting point of the Loop of LinkedList">Find the starting point of the Loop of LinkedList</label><br>
-                            <input type="checkbox" id="flattening-linkedlist" name="Flattening of a LinkedList" value="question6">
-                            <label for="Flattening of a LinkedList">Flattening of a LinkedList</label><br>
+                        <input type="checkbox" id="intersection-point" name="Find intersection point of Y LinkedList" value="question1">
+                        <label for="Find intersection point of Y LinkedList"><a href="https://leetcode.com/problems/intersection-of-two-linked-lists/" target="_blank">Find intersection point of Y LinkedList</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="detect-cycle" name="Detect a cycle in Linked List" value="question2">
+                        <label for="Detect a cycle in Linked List"><a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank">Detect a cycle in Linked List</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="reverse-linkedlist-groups" name="Reverse a LinkedList in groups of size k." value="question3">
+                        <label for="Reverse a LinkedList in groups of size k."><a href="https://leetcode.com/problems/reverse-nodes-in-k-group/" target="_blank">Reverse a LinkedList in groups of size k.</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="check-palindrome" name="Check if a LinkedList is palindrome or not." value="question4">
+                        <label for="Check if a LinkedList is palindrome or not."><a href="https://leetcode.com/problems/palindrome-linked-list/" target="_blank">Check if a LinkedList is palindrome or not.</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="starting-point-loop" name="Find the starting point of the Loop of LinkedList" value="question5">
+                        <label for="Find the starting point of the Loop of LinkedList"><a href="https://leetcode.com/problems/linked-list-cycle-ii/" target="_blank">Find the starting point of the Loop of LinkedList</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="flattening-linkedlist" name="Flattening of a LinkedList" value="question6">
+                        <label for="Flattening of a LinkedList"><a href="https://www.geeksforgeeks.org/flattening-a-linked-list/" target="_blank">Flattening of a LinkedList</a></label><br>
                         </div>
                     </div>
                 </div>
-
+            
                 <!-- Linked List and Arrays -->
                 <div class="array">
                     <h2 onclick="toggleQuestions()">Linked List and Arrays</h2>
                     <div id="questions-container" class="hidden">
                         <div id="questions">
-                            <input type="checkbox" id="rotate-linkedlist" name="Rotate a LinkedList" value="question1">
-                            <label for="Rotate a LinkedList">Rotate a LinkedList</label><br>
-                            <input type="checkbox" id="clone-linkedlist" name="Clone a Linked List with random and next pointer" value="question2">
-                            <label for="Clone a Linked List with random and next pointer">Clone a Linked List with random and next pointer</label><br>
-                            <input type="checkbox" id="3-sum" name="3 sum" value="question3">
-                            <label for="3 sum">3 sum</label><br>
-                            <input type="checkbox" id="trapping-rainwater" name="Trapping Rainwater" value="question4">
-                            <label for="Trapping Rainwater">Trapping Rainwater</label><br>
-                            <input type="checkbox" id="remove-duplicate-sorted-array" name="Remove Duplicate from Sorted array" value="question5">
-                            <label for="Remove Duplicate from Sorted array">Remove Duplicate from Sorted array</label><br>
-                            <input type="checkbox" id="max-consecutive-ones" name="Max consecutive ones" value="question6">
-                            <label for="Max consecutive ones">Max consecutive ones</label><br>
+                        <input type="checkbox" id="rotate-linkedlist" name="Rotate a LinkedList" value="question1">
+                        <label for="Rotate a LinkedList"><a href="https://leetcode.com/problems/rotate-list/" target="_blank">Rotate a LinkedList</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="clone-linkedlist" name="Clone a Linked List with random and next pointer" value="question2">
+                        <label for="Clone a Linked List with random and next pointer"><a href="https://leetcode.com/problems/copy-list-with-random-pointer/" target="_blank">Clone a Linked List with random and next pointer</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="3-sum" name="3 sum" value="question3">
+                        <label for="3 sum"><a href="https://leetcode.com/problems/3sum/" target="_blank">3 sum</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="trapping-rainwater" name="Trapping Rainwater" value="question4">
+                        <label for="Trapping Rainwater"><a href="https://leetcode.com/problems/trapping-rain-water/" target="_blank">Trapping Rainwater</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="remove-duplicate-sorted-array" name="Remove Duplicate from Sorted array" value="question5">
+                        <label for="Remove Duplicate from Sorted array"><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/" target="_blank">Remove Duplicate from Sorted array</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="max-consecutive-ones" name="Max consecutive ones" value="question6">
+                        <label for="Max consecutive ones"><a href="https://leetcode.com/problems/max-consecutive-ones/" target="_blank">Max consecutive ones</a></label><br>
                         </div>
                     </div>
                 </div>
-
+            
                 <!-- Greedy Algorithm -->
                 <div class="array">
                     <h2 onclick="toggleQuestions()">Greedy Algorithm</h2>
                     <div id="questions-container" class="hidden">
                         <div id="questions">
-                            <input type="checkbox" id="n-meetings" name="N meetings in one room" value="question1">
-                            <label for="N meetings in one room">N meetings in one room</label><br>
-                            <input type="checkbox" id="min-platforms" name="Minimum number of platforms required for a railway" value="question2">
-                            <label for="Minimum number of platforms required for a railway">Minimum number of platforms required for a railway</label><br>
-                            <input type="checkbox" id="job-sequencing" name="Job sequencing Problem" value="question3">
-                            <label for="Job sequencing Problem">Job sequencing Problem</label><br>
-                            <input type="checkbox" id="fractional-knapsack" name="Fractional Knapsack Problem" value="question4">
-                            <label for="Fractional Knapsack Problem">Fractional Knapsack Problem</label><br>
-                            <input type="checkbox" id="min-coins" name="Greedy algorithm to find minimum number of coins" value="question5">
-                            <label for="Greedy algorithm to find minimum number of coins">Greedy algorithm to find minimum number of coins</label><br>
-                            <input type="checkbox" id="assign-cookies" name="Assign Cookies" value="question6">
-                            <label for="Assign Cookies">Assign Cookies</label><br>
+                        <input type="checkbox" id="n-meetings" name="N meetings in one room" value="question1">
+                        <label for="N meetings in one room"><a href="https://www.geeksforgeeks.org/activity-selection-problem-greedy-algo-1/" target="_blank">N meetings in one room</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="min-platforms" name="Minimum number of platforms required for a railway" value="question2">
+                        <label for="Minimum number of platforms required for a railway"><a href="https://www.geeksforgeeks.org/minimum-number-platforms-required-railwaybus-station/" target="_blank">Minimum number of platforms required for a railway</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="job-sequencing" name="Job sequencing Problem" value="question3">
+                        <label for="Job sequencing Problem"><a href="https://www.geeksforgeeks.org/job-sequencing-problem/" target="_blank">Job sequencing Problem</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="fractional-knapsack" name="Fractional Knapsack Problem" value="question4">
+                        <label for="Fractional Knapsack Problem"><a href="https://www.geeksforgeeks.org/fractional-knapsack-problem/" target="_blank">Fractional Knapsack Problem</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="min-coins" name="Greedy algorithm to find minimum number of coins" value="question5">
+                        <label for="Greedy algorithm to find minimum number of coins"><a href="https://www.geeksforgeeks.org/greedy-algorithm-to-find-minimum-number-of-coins/" target="_blank">Greedy algorithm to find minimum number of coins</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="assign-cookies" name="Assign Cookies" value="question6">
+                        <label for="Assign Cookies"><a href="https://leetcode.com/problems/assign-cookies/" target="_blank">Assign Cookies</a></label><br>
                         </div>
                     </div>
                 </div>
-
+            
                 <!-- Recursion -->
                 <div class="array">
                     <h2 onclick="toggleQuestions()">Recursion</h2>
                     <div id="questions-container" class="hidden">
                         <div id="questions">
-                            <input type="checkbox" id="subset-sums" name="Subset Sums" value="question1">
-                            <label for="Subset Sums">Subset Sums</label><br>
-                            <input type="checkbox" id="subset-ii" name="Subset-II" value="question2">
-                            <label for="Subset-II">Subset-II</label><br>
-                            <input type="checkbox" id="combination-sum-1" name="Combination sum-1" value="question3">
-                            <label for="Combination sum-1">Combination sum-1</label><br>
-                            <input type="checkbox" id="combination-sum-2" name="Combination sum-2" value="question4">
-                            <label for="Combination sum-2">Combination sum-2</label><br>
-                            <input type="checkbox" id="palindrome-partitioning" name="Palindrome Partitioning" value="question5">
-                            <label for="Palindrome Partitioning">Palindrome Partitioning</label><br>
-                            <input type="checkbox" id="kth-permutation" name="K-th permutation Sequence" value="question6">
-                            <label for="K-th permutation Sequence">K-th permutation Sequence</label><br>
+                        <input type="checkbox" id="subset-sums" name="Subset Sums" value="question1">
+                        <label for="Subset Sums"><a href="https://www.geeksforgeeks.org/subset-sum-problem/" target="_blank">Subset Sums</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="subset-ii" name="Subset-II" value="question2">
+                        <label for="Subset-II"><a href="https://leetcode.com/problems/subsets-ii/" target="_blank">Subset-II</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="combination-sum-1" name="Combination sum-1" value="question3">
+                        <label for="Combination sum-1"><a href="https://leetcode.com/problems/combination-sum/" target="_blank">Combination sum-1</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="combination-sum-2" name="Combination sum-2" value="question4">
+                        <label for="Combination sum-2"><a href="https://leetcode.com/problems/combination-sum-ii/" target="_blank">Combination sum-2</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="palindrome-partitioning" name="Palindrome Partitioning" value="question5">
+                        <label for="Palindrome Partitioning"><a href="https://leetcode.com/problems/palindrome-partitioning/" target="_blank">Palindrome Partitioning</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="kth-permutation" name="K-th permutation Sequence" value="question6">
+                        <label for="K-th permutation Sequence"><a href="https://leetcode.com/problems/permutation-sequence/" target="_blank">K-th permutation Sequence</a></label><br>
                         </div>
                     </div>
                 </div>
-
+            
                 <!-- Recursion and Backtracking -->
                 <div class="array">
                     <h2 onclick="toggleQuestions()">Recursion and Backtracking</h2>
                     <div id="questions-container" class="hidden">
                         <div id="questions">
-                            <input type="checkbox" id="permutations-string-array" name="Print all permutations of a string/array" value="question1">
-                            <label for="Print all permutations of a string/array">Print all permutations of a string/array</label><br>
-                            <input type="checkbox" id="n-queens" name="N queens Problem" value="question2">
-                            <label for="N queens Problem">N queens Problem</label><br>
-                            <input type="checkbox" id="sudoku-solver" name="Sudoko Solver" value="question3">
-                            <label for="Sudoko Solver">Sudoko Solver</label><br>
-                            <input type="checkbox" id="m-coloring" name="M Coloring Problem" value="question4">
-                            <label for="M Coloring Problem">M Coloring Problem</label><br>
-                            <input type="checkbox" id="rat-in-maze" name="Rat in a Maze" value="question5">
-                            <label for="Rat in a Maze">Rat in a Maze</label><br>
-                            <input type="checkbox" id="word-break" name="Word Break (print all ways)" value="question6">
-                            <label for="Word Break (print all ways)">Word Break (print all ways)</label><br>
+                        <input type="checkbox" id="permutations-string-array" name="Print all permutations of a string/array" value="question1">
+                        <label for="Print all permutations of a string/array"><a href="https://leetcode.com/problems/permutations/" target="_blank">Print all permutations of a string/array</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="n-queens" name="N queens Problem" value="question2">
+                        <label for="N queens Problem"><a href="https://leetcode.com/problems/n-queens/" target="_blank">N queens Problem</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="sudoku-solver" name="Sudoko Solver" value="question3">
+                        <label for="Sudoko Solver"><a href="https://leetcode.com/problems/sudoku-solver/" target="_blank">Sudoko Solver</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="m-coloring" name="M Coloring Problem" value="question4">
+                        <label for="M Coloring Problem"><a href="https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/" target="_blank">M Coloring Problem</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="rat-in-maze" name="Rat in a Maze" value="question5">
+                        <label for="Rat in a Maze"><a href="https://www.geeksforgeeks.org/rat-in-a-maze-backtracking-2/" target="_blank">Rat in a Maze</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="word-break" name="Word Break (print all ways)" value="question6">
+                        <label for="Word Break (print all ways)"><a href="https://leetcode.com/problems/word-break-ii/" target="_blank">Word Break (print all ways)</a></label><br>
                         </div>
                     </div>
                 </div>
-
+            
                 <!-- Binary Search -->
                 <div class="array">
                     <h2 onclick="toggleQuestions()">Binary Search</h2>
                     <div id="questions-container" class="hidden">
                         <div id="questions">
-                            <input type="checkbox" id="nth-root" name="The N-th root of an integer" value="question1">
-                            <label for="The N-th root of an integer">The N-th root of an integer</label><br>
-                            <input type="checkbox" id="matrix-median" name="Matrix Median" value="question2">
-                            <label for="Matrix Median">Matrix Median</label><br>
-                            <input type="checkbox" id="element-appears-once" name="Find the element that appears once in a sorted array, and the rest element appears twice (Binary search)" value="question3">
-                            <label for="Find the element that appears once in a sorted array, and the rest element appears twice (Binary search)">Find the element that appears once in a sorted array, and the rest element appears twice (Binary search)</label><br>
-                            <input type="checkbox" id="search-rotated-array" name="Search element in a sorted and rotated array/ find pivot where it is rotated" value="question4">
-                            <label for="Search element in a sorted and rotated array/ find pivot where it is rotated">Search element in a sorted and rotated array/ find pivot where it is rotated</label><br>
-                            <input type="checkbox" id="median-two-sorted-arrays" name="Median of 2 sorted arrays" value="question5">
-                            <label for="Median of 2 sorted arrays">Median of 2 sorted arrays</label><br>
-                            <input type="checkbox" id="kth-element-two-sorted-arrays" name="K-th element of two sorted arrays" value="question6">
-                            <label for="K-th element of two sorted arrays">K-th element of two sorted arrays</label><br>
-                            <input type="checkbox" id="allocate-min-pages" name="Allocate Minimum Number of Pages" value="question7">
-                            <label for="Allocate Minimum Number of Pages">Allocate Minimum Number of Pages</label><br>
-                            <input type="checkbox" id="aggressive-cows" name="Aggressive Cows" value="question8">
-                            <label for="Aggressive Cows">Aggressive Cows</label><br>
+                        <input type="checkbox" id="nth-root" name="The N-th root of an integer" value="question1">
+                        <label for="The N-th root of an integer"><a href="https://www.geeksforgeeks.org/calculating-n-th-real-root-using-binary-search/" target="_blank">The N-th root of an integer</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="matrix-median" name="Matrix Median" value="question2">
+                        <label for="Matrix Median"><a href="https://www.geeksforgeeks.org/find-median-row-wise-sorted-matrix/" target="_blank">Matrix Median</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="element-appears-once" name="Find the element that appears once in a sorted array, and the rest element appears twice (Binary search)" value="question3">
+                        <label for="Find the element that appears once in a sorted array, and the rest element appears twice (Binary search)"><a href="https://leetcode.com/problems/single-element-in-a-sorted-array/" target="_blank">Find the element that appears once in a sorted array, and the rest element appears twice (Binary search)</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="search-rotated-array" name="Search element in a sorted and rotated array/ find pivot where it is rotated" value="question4">
+                        <label for="Search element in a sorted and rotated array/ find pivot where it is rotated"><a href="https://leetcode.com/problems/search-in-rotated-sorted-array/" target="_blank">Search element in a sorted and rotated array/ find pivot where it is rotated</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="median-two-sorted-arrays" name="Median of 2 sorted arrays" value="question5">
+                        <label for="Median of 2 sorted arrays"><a href="https://leetcode.com/problems/median-of-two-sorted-arrays/" target="_blank">Median of 2 sorted arrays</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="kth-element-two-sorted-arrays" name="K-th element of two sorted arrays" value="question6">
+                        <label for="K-th element of two sorted arrays"><a href="https://www.geeksforgeeks.org/k-th-element-two-sorted-arrays/" target="_blank">K-th element of two sorted arrays</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="allocate-min-pages" name="Allocate Minimum Number of Pages" value="question7">
+                        <label for="Allocate Minimum Number of Pages"><a href="https://www.geeksforgeeks.org/allocate-minimum-number-pages/" target="_blank">Allocate Minimum Number of Pages</a></label><br>
+                        </div>
+                        
+                        <div id="questions">
+                        <input type="checkbox" id="aggressive-cows" name="Aggressive Cows" value="question8">
+                        <label for="Aggressive Cows"><a href="https://www.spoj.com/problems/AGGRCOW/" target="_blank">Aggressive Cows</a></label><br>
                         </div>
                     </div>
                 </div>

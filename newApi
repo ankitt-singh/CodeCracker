@@ -1,0 +1,14 @@
+apiKey: "AIzaSyBGMT3v_6fopeh78Ze44AJIPPBM-4FczFM",
+gemini api - AIzaSyDwgsu7ATOyXVQRZCOYSbi_pZRNfqAQOf4
+openAi api - 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
+hugging face- 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
+
+
+curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=GEMINI_AIzaSyDwgsu7ATOyXVQRZCOYSbi_pZRNfqAQOf4" \
+-H 'Content-Type: application/json' \
+-X POST \
+-d '{
+  "contents": [{
+    "parts":[{"text": "Explain how AI works"}]
+    }]
+   }'

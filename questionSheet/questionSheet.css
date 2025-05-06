@@ -252,7 +252,7 @@ nav ul li a {
     opacity: 1;
 }
 
-#questions-containerx {
+/* #questions-containerx {
     padding: 10px;
     border: 1px solid #e5e7eb;
     border-radius: 5px;
@@ -264,9 +264,9 @@ nav ul li a {
 }
 
 #questions-containerx.visible {
-    max-height: 500px; /* Adjust based on content height */
+    max-height: 500px; 
     opacity: 1;
-}
+} */
 
 .question {
     margin-bottom: 8px;
