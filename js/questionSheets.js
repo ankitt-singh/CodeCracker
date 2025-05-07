@@ -1,50 +1,56 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Get all the topic headings
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all the topic headings and allow collapsible sections
     const topicHeadings = document.querySelectorAll('.array h2');
-    
-    // Add click event listeners to each heading
     topicHeadings.forEach(heading => {
-        heading.addEventListener('click', function() {
-            // Find the questions container that's a sibling of the heading's parent
+        heading.addEventListener('click', function () {
             const questionsContainer = this.nextElementSibling;
-            
-            // Toggle the 'visible' class to show/hide the questions
             questionsContainer.classList.toggle('visible');
-            
-            // Optional: Rotate a caret icon if you add one
-            // const icon = this.querySelector('i');
-            // if (icon) {
-            //     icon.classList.toggle('rotate-180');
-            // }
         });
     });
-    
-    // Optional: Track checkbox changes to update solved/unsolved counts
+
+    // Track checkboxes and stats
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const solvedCount = document.getElementById('solved-count');
-    const unsolvedCount = document.getElementById('unsolved-count');
-    const totalCount = document.getElementById('total-count');
-    
-    // Initialize counts
-    let totalQuestions = checkboxes.length;
-    let solvedQuestions = 0;
-    
-    // Set total count
-    totalCount.textContent = totalQuestions;
-    unsolvedCount.textContent = totalQuestions;
-    
-    // Add change event listeners to checkboxes
+    const solvedCountElem = document.getElementById('solved-count');
+    const unsolvedCountElem = document.getElementById('unsolved-count');
+    const totalCountElem = document.getElementById('total-count');
+
+    const totalQuestions = checkboxes.length;
+    let solvedQuestions = JSON.parse(localStorage.getItem('solvedQuestions')) || [];
+
+    // Update count display
+    function updateCounts() {
+        solvedCountElem.textContent = solvedQuestions.length;
+        unsolvedCountElem.textContent = totalQuestions - solvedQuestions.length;
+        totalCountElem.textContent = totalQuestions;
+    }
+
+    // Initialize checkbox states from localStorage
     checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
+        const questionKey = checkbox.id || checkbox.dataset.questionId || checkbox.dataset.questionName || checkbox.parentElement.textContent.trim();
+
+        if (solvedQuestions.includes(questionKey)) {
+            checkbox.checked = true;
+        }
+
+        checkbox.addEventListener('change', function () {
+            const key = questionKey;
+
             if (this.checked) {
-                solvedQuestions++;
+                if (!solvedQuestions.includes(key)) {
+                    solvedQuestions.push(key);
+                }
             } else {
-                solvedQuestions--;
+                solvedQuestions = solvedQuestions.filter(q => q !== key);
             }
-            
-            // Update the counts
-            solvedCount.textContent = solvedQuestions;
-            unsolvedCount.textContent = totalQuestions - solvedQuestions;
+
+            // Update localStorage
+            localStorage.setItem('solvedQuestions', JSON.stringify(solvedQuestions));
+
+            // Update counts
+            updateCounts();
         });
     });
+
+    // Initialize counts on load
+    updateCounts();
 });
