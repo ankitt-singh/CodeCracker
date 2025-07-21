@@ -5,7 +5,7 @@
 // Anyone can view your source code and steal the key.
 // Use a backend server to protect your API key in production.
 // -----------------------------------------------------------------------------
-const API_KEY = "AIzaSyDwgsu7ATOyXVQRZCOYSbi_pZRNfqAQOf4"; // Replace with your actual key IF NEEDED for testing
+const API_KEY = ""; //AIzaSyDwgsu7ATOyXVQRZCOYSbi_pZRNfqAQOf4 // Replace with your actual key IF NEEDED for testing
 
 // Ensure the SDK is imported correctly via the importmap in HTML
 import { GoogleGenerativeAI } from "@google/generative-ai";
